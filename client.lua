@@ -76,7 +76,7 @@ CreateThread(function()
 							if PlayerJob.name == "vineyard" then
 								startVineyard = true
 							else
-								QBCore.Functions.Notify("I dont think I work here...", "error")
+								QBCore.Functions.Notify(LangStrings[Config.Locale].wrong_job, "error")
 							end
 						end
 					end
