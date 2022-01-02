@@ -203,7 +203,7 @@ CreateThread(function()
 										if PlayerJob.name == "vineyard" then
 											TriggerServerEvent("qb-vineyard:server:loadIngredients")
 										else
-											QBCore.Functions.Notify("I dont think I work here...", "error")
+											QBCore.Functions.Notify(LangStrings[Config.Locale].wrong_job, "error")
 										end
 									end
 								end
@@ -215,7 +215,7 @@ CreateThread(function()
 											if PlayerJob.name == "vineyard" then
 												StartWineProcess()
 											else
-												QBCore.Functions.Notify("I dont think I work here...", "error")
+												QBCore.Functions.Notify(LangStrings[Config.Locale].wrong_job, "error")
 											end
 										end
 									end
@@ -229,7 +229,7 @@ CreateThread(function()
 												loadIngredients = false
 												wineStarted = false
 											else
-												QBCore.Functions.Notify("I dont think I work here...", "error")
+												QBCore.Functions.Notify(LangStrings[Config.Locale].wrong_job, "error")
 											end
 										end
 									end
@@ -262,7 +262,7 @@ CreateThread(function()
 							if PlayerJob.name == "vineyard" then
 								TriggerServerEvent("qb-vineyard:server:grapeJuice")
 							else
-								QBCore.Functions.Notify("I dont think I work here...", "error")
+								QBCore.Functions.Notify(LangStrings[Config.Locale].wrong_job, "error")
 							end
 						end
 					end
@@ -308,7 +308,7 @@ function grapeJuiceProcess()
         ClearPedTasks(PlayerPedId())
     end, function() -- Cancel
         ClearPedTasks(PlayerPedId())
-        QBCore.Functions.Notify("Process Canceled", "error")
+		QBCore.Functions.Notify(LangStrings[Config.Locale].cancel_prog, "error")
     end)
 end
 

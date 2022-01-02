@@ -1,22 +1,10 @@
---[[ LangStrings = {}
-
-
-if Config.Language == 'english' then
-    LangStrings = {
-        ['wrong_job'] = 'Dont have the right job'
-    }
-elseif Config.Language == 'spanish' then
-    LangStrings = {
-        ['wrong_job'] = 'Bla Bla'
-    }
-end
- ]]
-
 LangStrings = {
     ['en'] = {
         ['wrong_job'] = 'Dont have the right job',
+        ['cancel_prog'] = 'Cancelled'
     },
     ['bng'] = {
-        ['wrong_job'] = 'সঠিক কাজ নেই'
+        ['wrong_job'] = 'সঠিক কাজ নেই',
+        ['cancel_prog'] = 'বাতিল'
     }
 }
