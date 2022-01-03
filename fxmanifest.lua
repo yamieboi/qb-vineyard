@@ -5,7 +5,7 @@ description 'QB-Vineyard'
 version '1.0.0'
 
 shared_scripts {'config.lua','lang.lua'}
-server_scripts 'server.lua'
+server_script 'server.lua'
 client_script 'client.lua'
 
 lua54 'yes'

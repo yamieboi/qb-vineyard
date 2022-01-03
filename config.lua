@@ -13,7 +13,7 @@ Config.Vineyard = {
 }
 
 Config.PickAmount = math.random(8, 12)
-Config.Locale = GetConvar("QBCore_Locale", "en")
+Config.Locale = GetConvar("QBCore_Locale", "en") --- dont touch
 
 Config.GrapeAmount = math.random(8, 12)
 

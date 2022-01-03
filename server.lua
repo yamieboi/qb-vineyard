@@ -16,13 +16,13 @@ RegisterNetEvent('qb-vineyard:server:loadIngredients', function()
                 TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items['grapejuice'], "remove")
                 TriggerClientEvent("qb-vineyard:client:loadIngredients", source)
             else
-                TriggerClientEvent('QBCore:Notify', source, "You do not have the correct items", 'error')
+                TriggerClientEvent('QBCore:Notify', source, LangStrings[Config.Locale].no_items, 'error')
             end
         else
-            TriggerClientEvent('QBCore:Notify', source, "You do not have the correct items", 'error')
+            TriggerClientEvent('QBCore:Notify', source, LangStrings[Config.Locale].no_items, 'error')
         end
 	else
-		TriggerClientEvent('QBCore:Notify', source, "You Have Nothing...", "error")
+		TriggerClientEvent('QBCore:Notify', source, LangStrings[Config.Locale].no_items, "error")
 	end
 end)
 
@@ -36,13 +36,13 @@ RegisterNetEvent('qb-vineyard:server:grapeJuice', function()
                 TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items['grape'], "remove")
                 TriggerClientEvent("qb-vineyard:client:grapeJuice", source)
             else
-                TriggerClientEvent('QBCore:Notify', source, "You do not have the correct items", 'error')
+                TriggerClientEvent('QBCore:Notify', source, LangStrings[Config.Locale].no_items, 'error')
             end
         else
-            TriggerClientEvent('QBCore:Notify', source, "You do not have the correct items", 'error')
+            TriggerClientEvent('QBCore:Notify', source, LangStrings[Config.Locale].no_items, 'error')
         end
 	else
-		TriggerClientEvent('QBCore:Notify', source, "You Have Nothing...", "error")
+		TriggerClientEvent('QBCore:Notify', source, LangStrings[Config.Locale].no_items, "error")
 	end
 end)
 

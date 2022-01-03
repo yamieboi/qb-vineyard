@@ -76,7 +76,7 @@ CreateThread(function()
 							if PlayerJob.name == "vineyard" then
 								startVineyard = true
 							else
-								QBCore.Functions.Notify(LangStrings[Config.Locale].wrong_job, "error")
+								QBCore.Functions.Notify(''..LangStrings[Config.Locale].wrong_job..' '..math.random(1,10)..'', "error")
 							end
 						end
 					end
@@ -88,6 +88,7 @@ CreateThread(function()
 		Wait(5)
     end
 end)
+
 
 CreateThread(function()
 	while true do
@@ -174,7 +175,7 @@ function pickProcess()
         ClearPedTasks(PlayerPedId())
     end, function() -- Cancel
         ClearPedTasks(PlayerPedId())
-        QBCore.Functions.Notify("Process Canceled", "error")
+        QBCore.Functions.Notify(LangStrings[Config.Locale].cancel_prog, "error")
     end)
 end
 
@@ -260,7 +261,8 @@ CreateThread(function()
 						DrawText3Ds(Config.Vineyard["grapejuice"].coords.x, Config.Vineyard["grapejuice"].coords.y,  Config.Vineyard["grapejuice"].coords.z + 0.2, '[E] Make Grape Juice')
 						if IsControlJustPressed(0, 38) then
 							if PlayerJob.name == "vineyard" then
-								TriggerServerEvent("qb-vineyard:server:grapeJuice")
+								TriggerServerEvent("Sheeeeeeeeeeeesh")
+								print('11s')
 							else
 								QBCore.Functions.Notify(LangStrings[Config.Locale].wrong_job, "error")
 							end
